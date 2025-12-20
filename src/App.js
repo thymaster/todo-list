@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "./styles.scss";
+import "./styles.css";
 
 const Task = ({ ele, tasks, setTasks }) => {
-  handleTaskDelete = (id) => {
+  const handleTaskDelete = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
@@ -18,9 +18,11 @@ export default function App() {
   const [tasks, setTasks] = useState([]);
   const [taskName, setTaskName] = useState("");
 
-  addTaskHandler = () => {
-    setTasks([...tasks, { item: taskName, id: Date.now() }]);
-    setTaskName("");
+  const addTaskHandler = () => {
+    if (taskName) {
+      setTasks([...tasks, { item: taskName, id: Date.now() }]);
+      setTaskName("");
+    }
   };
 
   return (
