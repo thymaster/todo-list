@@ -1,0 +1,18 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  .action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .tasks-list {
+    display: flex;
+    flex-direction: column;
+    .tasks-action {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}
