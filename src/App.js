@@ -6,9 +6,12 @@ const Task = ({ ele, tasks, setTasks }) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
+  const handleTaskEdit = (id) => {};
+
   return (
     <div className="tasks-action">
       <div>{ele.item}</div>
+      <button onClick={() => handleTaskEdit(ele.id)}>Edit</button>
       <button onClick={() => handleTaskDelete(ele.id)}>Delete</button>
     </div>
   );
